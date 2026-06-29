@@ -37,5 +37,6 @@ app.MapGet("/", () => "ClientFlow API is running.");
 
 app.MapClientEndpoints();
 app.MapProjectEndpoints();
+app.MapDashboardEndpoints();
 
 app.Run();

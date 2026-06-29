@@ -1,5 +1,6 @@
 using ClientFlow.Api.Data;
 using Microsoft.EntityFrameworkCore;
+using ClientFlow.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,5 +34,6 @@ app.UseHttpsRedirection();
 app.UseCors("ReactApp");
 
 app.MapGet("/", () => "ClientFlow API is running.");
+app.MapClientEndpoints();
 
 app.Run();

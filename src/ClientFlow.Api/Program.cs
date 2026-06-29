@@ -34,6 +34,8 @@ app.UseHttpsRedirection();
 app.UseCors("ReactApp");
 
 app.MapGet("/", () => "ClientFlow API is running.");
+
 app.MapClientEndpoints();
+app.MapProjectEndpoints();
 
 app.Run();
